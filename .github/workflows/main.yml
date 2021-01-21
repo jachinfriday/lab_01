@@ -1,16 +1,16 @@
-name: Render Rmd
+name: Render my document to HTML
+
 on: [push]
 
 jobs:
   render:
-    name: Render my document to multiple formats
+    name: Render my document to HTML
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
-      - uses: r-lib/actions/setup-tinytex@v1
       - name: Install rmarkdown
         run: Rscript -e 'install.packages("rmarkdown")'
-      - name: Render my document to all types
-        run: Rscript -e 'rmarkdown::render("lab_01.Rmd", output_format = "all")'
+      - name: Render my document to only HTML
+        run: Rscript -e 'rmarkdown::render("lab_01.Rmd", output_format = "html_document")'
