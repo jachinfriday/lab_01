@@ -10,4 +10,3 @@ jobs:
         uses: lc5415/rmarkdown-action@v1
         with:
           input_file: lab_01.Rmd
-	  output_format: html_document
