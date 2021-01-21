@@ -1,12 +1,16 @@
-name: Render documents with rmarkdown-action
+name: Render Rmd
 on: [push]
+
 jobs:
-  render_document:
-    runs-on: ubuntu-latest
+  render:
+    name: Render my document to multiple formats
+    runs-on: macOS-latest
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Render document
-        uses: lc5415/rmarkdown-action@v1
-        with:
-          input_file: lab_01.Rmd
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - uses: r-lib/actions/setup-tinytex@v1
+      - name: Install rmarkdown
+        run: Rscript -e 'install.packages("rmarkdown")'
+      - name: Render my document to all types
+        run: Rscript -e 'rmarkdown::render("lab_01.Rmd", output_format = "all")'
