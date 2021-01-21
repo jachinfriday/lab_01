@@ -1,3 +1,5 @@
+![Render Rmd](https://github.com/lc5415/rmarkdown-action/workflows/Render%20Rmd/badge.svg)
+
 # STA 323 & 523: Lab 01
 
 ## Description
