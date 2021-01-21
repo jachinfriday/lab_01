@@ -1,10 +1,10 @@
-name: Render my document to HTML
+name: Render Rmd
 
 on: [push]
 
 jobs:
   render:
-    name: Render my document to HTML
+    name: Render Rmd
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
