@@ -1,6 +1,9 @@
 name: Render Rmd
 
-on: [push]
+on:
+  push:
+    paths:
+      - lab_01.Rmd
 
 jobs:
   render:
