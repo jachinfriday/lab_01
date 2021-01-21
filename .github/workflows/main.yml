@@ -1,0 +1,2 @@
+- name: Github action for rmarkdown
+  uses: lc5415/rmarkdown-action@v1
