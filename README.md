@@ -1,4 +1,4 @@
-![Render Rmd](https://github.com/lc5415/rmarkdown-action/workflows/Render%20Rmd/badge.svg)
+![Render Rmd](https://github.com/sta323-523-sp21/lab_01/workflows/Render%20Rmd/badge.svg)
 
 # STA 323 & 523: Lab 01
 
